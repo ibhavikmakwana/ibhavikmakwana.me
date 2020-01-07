@@ -9,7 +9,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'ibhavikmakwana',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        backgroundColor: Colors.white,
         fontFamily: 'MajorMonoDisplay',
         primarySwatch: Colors.blue,
       ),
