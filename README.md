@@ -1,6 +1,8 @@
-# ibhavikmakwana
+# ibhavikmakwana.me
 
-A new Flutter application.
+A Flutter Web app personal portfolio.
+
+![Graphic](./screenshot/home.png)
 
 ## Getting Started
 
