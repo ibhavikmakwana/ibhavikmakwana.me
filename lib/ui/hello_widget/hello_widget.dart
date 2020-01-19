@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ibhavikmakwana/utils/constants.dart';
+import 'package:ibhavikmakwana/utils/extensions.dart';
 
 class HelloWidget extends StatefulWidget {
   @override
@@ -63,25 +64,28 @@ class _HelloWidgetState extends State<HelloWidget>
           ),
         ),
         Center(
-          child: AnimatedBuilder(
-            animation: _animationController,
-            builder: (context, child) => RichText(
-              text: TextSpan(
-                style: TextStyle(
-                  fontSize: 128,
-                  fontFamily: 'MajorMonoDisplay',
-                  fontWeight: FontWeight.w900,
-                  color: Colors.black,
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: AnimatedBuilder(
+              animation: _animationController,
+              builder: (context, child) => RichText(
+                text: TextSpan(
+                  style: TextStyle(
+                    fontSize: 148.sdp,
+                    fontFamily: 'MajorMonoDisplay',
+                    fontWeight: FontWeight.w900,
+                    color: Colors.black,
+                  ),
+                  children: [
+                    TextSpan(
+                      text: 'He\nllo'.toUpperCase(),
+                    ),
+                    TextSpan(
+                      text: '.',
+                      style: TextStyle(color: _animation.value),
+                    ),
+                  ],
                 ),
-                children: [
-                  TextSpan(
-                    text: 'He\nllo'.toUpperCase(),
-                  ),
-                  TextSpan(
-                    text: '.',
-                    style: TextStyle(color: _animation.value),
-                  ),
-                ],
               ),
             ),
           ),
